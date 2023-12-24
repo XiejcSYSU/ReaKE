@@ -2,7 +2,7 @@
 
 Source code for "Chemical Synthesis Prediction through Contrastive Molecular Representation Learning with Reaction Knowledge Graph"
 
-<img src="./fig/fig.PNG" style="zoom:66%;" />
+<img src="./fig/fig.png" style="zoom:66%;" />
 
 # Dataset
 
