@@ -5,7 +5,6 @@ import train
 import pandas as pd
 from yield_pred import yp_data_preprocess, yp_train
 from reaction_class import rc_data_preprocess, rc_train
-from visual import rc_data_preprocess_reake, tmap_visual_reake
 
 def print_setting(args):
     print('\n===========================')
@@ -37,7 +36,6 @@ def main():
     #'''
     '''
     parser.add_argument('--task', type=str, default='reaction_classification', help='downstream task')
-    parser.add_argument('--visual', type=bool, default=false, help='batch size for calling the pretrained model')
     parser.add_argument('--pretrained_model', type=str, default='tag', help='the pretrained model')
     parser.add_argument('--dataset', type=str, default='schneider', help='dataset name')
     parser.add_argument('--batch_size', type=int, default=200, help='batch size for calling the pretrained model')
@@ -59,13 +57,8 @@ def main():
 
     elif args.task == 'reaction_classification':
         #classification
-        if args.visual == False:
-            data = rc_data_preprocess.load_data(args)
-            rc_train.train(args, data)
-        #visualization
-        else:
-            data = rc_data_preprocess_reake.load_data(args)
-            tmap_visual_reake.draw(args, data)
+        data = rc_data_preprocess.load_data(args)
+        rc_train.train(args, data)
 
     elif args.task == 'yield_prediction':
         data = yp_data_preprocess.load_data(args)
