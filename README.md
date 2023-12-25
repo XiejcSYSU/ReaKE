@@ -17,10 +17,7 @@ ReaKE is mainly based on the following packages:
 - rdkit 2023.3.1
 - numpy 1.24.3
 - pytorch 1.12.1+cu116
-- pytorch-scatter 1.6.1
-- pytorch-cluster 2.1.1
-- torch-sparse 0.6.17
-- torch-geometric 2.3.1
+- dgl 0.9.0
 
 Also you can install the required packages follow there instructions (tested on a linux terminal):
 
@@ -62,4 +59,4 @@ python main.py --task yield_prediction --pretrained_model tag_f00 --dataset buch
 Citation:
 
 Contact:
-In case you have questions, please contact [Jiancong Xie](https://github.com/biomed-AI/MUSE/blob/master/xiejc3@mail2.sysu.edu.cn)
+In case you have questions, please contact Jiancong Xie: xiejc3@mail2.sysu.edu.cn
